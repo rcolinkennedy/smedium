@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Add Foundation for front end framework
 gem 'compass-rails' # you need this or you get an error
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'zurb-foundation', '~> 4.3.2'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
