@@ -1,5 +1,5 @@
 Smedium::Application.routes.draw do
-  resources :users
+  # resources :users
   root :to => "static_pages#home"
 
   get "static_pages/home"
@@ -8,7 +8,7 @@ Smedium::Application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   # get "users/register"
 
-  match '/register', to: 'users#register', via: 'register'
+  get '/register', to: 'users#register', via: 'register'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
       if user.email = nil
-        reidrect_to register_path
+        redirect_to register_path
       else
         redirect_to root_url, notice: "Signed in!"
       end

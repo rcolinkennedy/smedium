@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["info"]["nickname"]
     end
-    # redirect_to register_path
+     redirect_to register_path
   end
 end
   # def self.from_omniauth(auth)
