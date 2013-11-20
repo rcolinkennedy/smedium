@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessor :email
+  # attr_accessor :email
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["info"]["nickname"]
     end
-     redirect_to register_path
-  end
+  #    redirect_to register_path
+   end
 end
   # def self.from_omniauth(auth)
   #   where(auth.slice("provider", "uid")).first || self.create_from_omniauth(auth)
