@@ -1,0 +1,17 @@
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smedium Home | <%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <p>
+      This is a sample homepage for the generated app
+      <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+    </p>
+    <p>
+    	<h3><%= link_to "Sign in with Twitter", "/auth/twitter"%></h3>
+    </p>
+  </body>
+</html>
