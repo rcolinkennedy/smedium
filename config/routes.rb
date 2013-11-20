@@ -1,10 +1,11 @@
 Smedium::Application.routes.draw do
-  # resources :users
+
   root :to => "static_pages#home"
 
   resources :users
 
   get "static_pages/home"
+  
   get 'auth/twitter/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
