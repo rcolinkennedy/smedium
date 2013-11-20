@@ -11,7 +11,12 @@
       <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
     </p>
     <p>
-    	<h3><%= link_to "Sign in with Twitter", "/auth/twitter"%></h3>
+    	<% if current_user %>
+    		<h3>Signed in as <%= current_user.name %></h3>
+    		<%= link_to "Sign out", signout_path %>
+  		<% else %>
+    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter"%></h3>
+  		<% end %>
     </p>
   </body>
 </html>

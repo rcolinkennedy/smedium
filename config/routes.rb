@@ -1,9 +1,14 @@
 Smedium::Application.routes.draw do
-  get "users/register"
+  resources :users
   root :to => "static_pages#home"
 
   get "static_pages/home"
   get 'auth/twitter/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+  # get "users/register"
+
+  match '/register', to: 'users#register', via: 'register'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

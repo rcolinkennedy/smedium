@@ -1,2 +1,18 @@
-<h1>Users#register</h1>
+<% provide(:title, 'Register') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smedium Register New User</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <p>
+    	<h3>Enter your email address below to coplete registration</h3>     
+		<%= form_for @user do |f| %>
+		  <p>
+		    <%= f.label :email %><br />
+		    <%= f.text_field :email %>
+		  </p>
+  </body>
+</html><h1>Users#register</h1>
 <p>Find me in app/views/users/register.html.erb</p>
