@@ -13,9 +13,9 @@
     <p>
     	<% if current_user %>
     		<h3>Signed in as <%= current_user.name %></h3>
-    		<%= link_to "Sign out", signout_path %>
+    		<%= link_to "Sign out", signout_path, :class => "button" %>
   		<% else %>
-    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter"%></h3>
+    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %></h3>
   		<% end %>
     </p>
   </body>
