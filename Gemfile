@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Add Foundation for front end framework
 gem 'compass-rails' # you need this or you get an error
-gem 'zurb-foundation', '~> 4.3.2'
+gem 'zurb-foundation'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -25,8 +25,6 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-gem 'byebug'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -48,6 +46,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Better Errors for error inspection
+gem 'better_errors'
+
+
 # Authentication tools
 gem 'omniauth-twitter'
 # Use Figaro to stash keys for dev and deployment
@@ -57,6 +59,9 @@ gem 'figaro', '~> 0.7.0'
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.8'
+
+  # Add byebug for debugging
+  gem 'byebug'
 
   # Add RSpec for rails
   gem 'rspec-rails', '2.13.1'
