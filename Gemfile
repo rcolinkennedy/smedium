@@ -14,8 +14,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Add Foundation for front end framework
-gem 'compass-rails' # you need this or you get an error
-gem 'zurb-foundation'
+# gem 'compass-rails' # you need this or you get an error in Foundation 4, removing for F5
+# gem 'zurb-foundation', '~> 4.3.2'
+
+# Upgrade to Foundation 5
+gem 'foundation-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -47,7 +50,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Use Better Errors for error inspection
-gem 'better_errors'
+# gem 'better_errors'
 
 
 # Authentication tools
