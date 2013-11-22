@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user.update_attributes(params.require(:user).permit(:email))
     redirect_to root_url
   end
+
 private
   def get_user
     @user = User.find(params[:id])
