@@ -4,7 +4,8 @@ Smedium::Application.routes.draw do
 
   resources :users
 
-  get "static_pages/home"
+  #get "static_pages/home" # deprecated since root works
+  get "static_pages/about" #, to: 'static_pages#about', as: :about
   
   get 'auth/twitter/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
