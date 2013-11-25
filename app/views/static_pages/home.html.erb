@@ -1,18 +1,15 @@
 <% provide(:title, 'Home') %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>smedium | <%= yield(:title) %></title>
-  </head>
   <body>
     <h1>Home</h1>
     <p>
-      This is a sample homepage for the generated app
+      This is a sample homepage for
       <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
     </p>
     <p>
     	<% if current_user %>
-    		<h3>Signed in as <%= current_user.name %></h3>
+    		<h3>Signed in as <%= current_user.nickname %></h3>
     		<%= link_to "Sign out", signout_path, :class => "button" %>
   		<% else %>
     		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %></h3>
