@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :provider, presence: true
+  validates :uid, presence: true
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -12,4 +14,8 @@ class User < ActiveRecord::Base
       user.name = auth["info"]["name"]
       end
    end
+
+  # def to_param
+  #   self.nickname
+  # end
 end

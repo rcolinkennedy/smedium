@@ -2,13 +2,21 @@ Smedium::Application.routes.draw do
 
   root :to => "static_pages#home"
 
-  resources :users
-  # get "static_pages/home" # deprecated since moved to root
   get '/about', to: 'static_pages#about'
-  
+
   get 'auth/twitter/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  get '/signout', to: 'sessions#destroy', as: 'signout'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
+  
+  resources :users
+  # get "static_pages/home" # deprecated since moved to root
+  # match "/profile/:nickname" => "users#show", via: "get"
+  # match "/profile/:user_url" => "users#show", via: "get" # for later
+  # match "/:nickname" => "users#show", via: "get"
+
+  
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
