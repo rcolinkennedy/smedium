@@ -11,15 +11,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    # User.find_by_nickname!(params[:nickname])
+    # get_user
+    @user = User.find_by_profile_url(params[:id])
   end
 
 private
-  def get_user
-    @user = User.find(params[:id])
-  end
-
   # def get_user
-  #   @user = User.find(params[:nickname])
+  #   @user = User.find(params[:id])
   # end
+
+  def get_user
+    @user = User.find_by_profile_url(params[:id])
+  end
 end
