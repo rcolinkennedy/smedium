@@ -1,20 +1,20 @@
-<% provide(:title, '@user.nickname' ) %>
+<% provide(:title, @user.nickname ) %>
 <!DOCTYPE html>
 <html>
   <body>
-  	<h1><%= '@user.nickname' %></h1>
+  	<h1><%= @user.nickname %></h1>
     <p>
     	This is a sample Profile page for
     	<a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
     	<h3><%= link_to "Home", root_path, :class => "button" %></h3>
     </p>
     <p>
-  		<h4>Debug Info</h4><br>
+<!--   		<h4>Debug Info</h4><br>
   		<h5><%= '@user:' %></h5><br>
   		<%= @user.to_yaml %>
   		<br>
   		<h5><%= 'current_user:' %></h5><br>
-  		<%= current_user.to_yaml %>
+  		<%= current_user.to_yaml %> -->
   	</p>
   </body>
 </html>

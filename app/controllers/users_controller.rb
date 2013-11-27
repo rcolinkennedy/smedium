@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 
   def show
     # get_user
-    @user = User.find_by_profile_url(params[:id])
+    # @user = User.find_by_profile_url(params[:id])
+    @user = User.find_by_profile_url(params[:profile_url])
   end
 
 private
@@ -23,4 +24,8 @@ private
   def get_user
     @user = User.find_by_profile_url(params[:id])
   end
+
+  # def get_user
+  #   @user = User.find_by_profile_url(params[:profile_url])
+  # end
 end

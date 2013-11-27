@@ -24,4 +24,6 @@ ActiveRecord::Schema.define(version: 20131127143826) do
     t.string   "profile_url"
   end
 
+  add_index "users", ["profile_url"], name: "index_users_on_profile_url"
+
 end

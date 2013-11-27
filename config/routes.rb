@@ -9,7 +9,7 @@ Smedium::Application.routes.draw do
   get '/signout', to: 'sessions#destroy', as: 'signout'
   get '/logout', to: 'sessions#destroy', as: 'logout'
   
-  resources :users
+  resources :users, :except => :show
   match "/:profile_url" => "users#show", via: "get"
   # get "static_pages/home" # deprecated since moved to root
 
