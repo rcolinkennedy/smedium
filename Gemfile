@@ -13,12 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# Add Foundation for front end framework
-# gem 'compass-rails' # you need this or you get an error in Foundation 4, removing for F5
-# gem 'zurb-foundation', '~> 4.3.2'
-
 # Upgrade to Foundation 5
-gem 'foundation-rails'
+gem 'foundation-rails', "~> 5.0.2.0"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
