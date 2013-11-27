@@ -7,7 +7,7 @@ describe "Static pages" do
     it "should have the title 'Home'" do
       visit '/'
       # visit '/static_pages/home' # deprecated when moved to root
-      expect(page).to have_title("smedium | Home")
+      expect(page).to have_title("Home | smedium")
     end
 
     it "should have the content 'Home'" do
@@ -21,7 +21,7 @@ describe "Static pages" do
 
     it "should have the title 'About'" do
       visit '/about'
-      expect(page).to have_title('smedium | About')
+      expect(page).to have_title('About | smedium')
     end
 
     it "should have the content 'About'" do
@@ -30,3 +30,4 @@ describe "Static pages" do
     end
   end
 end
+

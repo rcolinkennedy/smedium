@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 
   before { @user = User.new(name: "Example User", provider: "twitter",
-    uid: "12345678", email: "user@example.com", nickname: "Example" ) }
+    uid: "12345678", email: "user@example.com", nickname: "Example", profile_url: "@example" ) }
 
   subject { @user }
 
@@ -12,6 +12,7 @@ describe User do
   it { should respond_to(:uid) }
   it {should respond_to(:email) }
   it {should respond_to(:nickname)}
+  it {should respond_to(:profile_url)}
 
   describe "when provider is not present" do
     before { @user.provider = " " }

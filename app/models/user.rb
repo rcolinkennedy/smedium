@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.nickname = auth["info"]["nickname"]
       user.name = auth["info"]["name"]
+      user.profile_url = "@" + auth["info"]["nickname"].downcase
       end
    end
 

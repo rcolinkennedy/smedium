@@ -1,11 +1,12 @@
-<% provide(:title, 'Nickname') %>
+<% provide(:title, @user.nickname) %>
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Nickname</h1>
+    <h1><%= @user.nickname %></h1>
     <p>
-      This is a sample About page for
-      <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+    	This is a sample About page for
+    	<a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+    	<h3><%= link_to "Home", root_path, :class => "button" %></h3>
     </p>
   </body>
 </html>
