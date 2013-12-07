@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
+  # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+
   validates :provider, presence: true
   validates :uid, presence: true, uniqueness: true
+  # validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)

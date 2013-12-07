@@ -10,9 +10,10 @@
     	<h3>Enter your email address below to complete registration</h3>     
 		<%= form_for @user do |f| %>
 		  <p>
-		    <%= f.label :email %><br />
 		    <%= f.text_field :email %>
 		  </p>
       <%= f.submit "Complete Registration", :class => "button" %>
 		<% end %>
   </body>
+
+<!-- Found at http://localhost:3000/users/<username>/edit -->

@@ -3,11 +3,12 @@ class SessionsController < ApplicationController
   def create
     @user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = @user.id
-      if @user.email == nil
-        redirect_to edit_user_path @user
-      else
-        redirect_to root_url, notice: "Signed in!"
-      end
+
+    if @user.email.blank?
+      redirect_to edit_user_path @user
+    else
+      redirect_to root_url, notice: "Signed in!"
+    end
   end
 
   def destroy

@@ -27,6 +27,12 @@ Spork.prefork do
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+    # Added to enable FactoryGirl in test
+    config.include FactoryGirl::Syntax::Methods
+
+    # Add configuration for OmniAuth with Capybara
+    config.include IntegrationSpecHelper, :type => :request
+
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, remove the following line or assign false
     # instead of true.
@@ -48,10 +54,14 @@ Spork.prefork do
     config.expect_with :rspec do |c|
       c.syntax = :expect
     end
+
+    Capybara.default_host = 'http://example.org'
+
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.add_mock(:twitter, { :uid => '12345', :nickname => 'zapnap' })
   end
 end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-
 end

@@ -10,6 +10,7 @@
     <p>
     	<% if current_user %>
     		<h3>Signed in as <%= current_user.nickname %></h3>
+        <%= link_to "Profile", profile_path(current_user), :class => "button" %>
     		<%= link_to "Sign out", signout_path, :class => "button" %>
   		<% else %>
     		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %></h3>
