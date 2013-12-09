@@ -6,14 +6,17 @@
     <p>
       This is a sample homepage for
       <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+      <br>
+      Learn more on our 
+      <%= link_to "About page", about_path %>
     </p>
     <p>
     	<% if current_user %>
     		<h3>Signed in as <%= current_user.nickname %></h3>
-        <%= link_to "Profile", profile_path(current_user), :class => "button" %>
-    		<%= link_to "Sign out", signout_path, :class => "button" %>
+        <%= link_to "Sign out", signout_path, :class => "button" %>
+        <%= link_to "Profile", profile_path(current_user), :class => "button radius" %>
   		<% else %>
-    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %></h3>
+    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %></h3>
   		<% end %>
     </p>
   </body>

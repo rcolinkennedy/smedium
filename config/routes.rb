@@ -10,7 +10,6 @@ Smedium::Application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: 'logout'
   
   resources :users, :except => :show
-  # match "/:profile_url" => "users#show", via: "get"
   get "/:profile_url", to: "users#show", as: 'profile'
   
  
