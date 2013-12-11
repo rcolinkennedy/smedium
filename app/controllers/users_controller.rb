@@ -11,7 +11,11 @@ class UsersController < ApplicationController
 
   def update
     @user.update_attributes(params.require(:user).permit(:email))
-    redirect_to root_url
+    if @user.save
+      redirect_to root_url
+    else
+      render 'register'
+    end
   end
 
   def show

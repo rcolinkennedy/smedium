@@ -7,12 +7,15 @@
   <body>
     <h1>Register</h1>
     <p>
-    	<h3>Enter your email address below to complete registration</h3>     
-		<%= form_for @user do |f| %>
-		  <p>
-		    <%= f.text_field :email %>
-		  </p>
-      <%= f.submit "Complete Registration", :class => "button radius" %>
+      <h2>Welcome to the team, <%= current_user.nickname %></h2>
+    </p>
+    	<h4>One last step. Enter your email address below to finish registration.</h4>
+      <div>
+        <%= form_for @user do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.text_field :email %>
+          <%= f.submit "Complete Registration", :class => "button radius" %>
+      </div>
 		<% end %>
   </body>
 

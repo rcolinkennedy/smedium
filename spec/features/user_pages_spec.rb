@@ -1,17 +1,36 @@
 require 'spec_helper'
 
-feature "Logged out user visits Profile page" do
+describe "Logged out user visits Profile page" do
 
   subject { page }
-	
+  
   let(:user) { FactoryGirl.create(:user) }
 
-	before { visit profile_path(user) }
+  before { visit profile_path(user) }
 
   it { should have_content("Profile") }
   it { should have_content(user.nickname) }
 
 end
+
+describe "Log in leads to registration" do
+  context "Clicking the 'sign in' link takes New User to Registration" do
+    it "Login button should log in" do
+      visit root_path
+      click_link "Sign in with Twitter"
+      expect(page).to have_content("registration")
+    end
+  end
+end
+
+feature "new User completes Registration by entering email on Register page" do
+
+  scenario "User logs in with OmniAuth" do
+    #Enter tests here
+  end
+
+end
+
 
 # Below is a bunch of Trial and Error
 
