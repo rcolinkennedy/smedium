@@ -10,7 +10,10 @@ Smedium::Application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: 'logout'
   
   resources :users, :except => :show
+  get "/:profile_url/register", to: "users#register", as: 'register'
   get "/:profile_url", to: "users#show", as: 'profile'
+
+end
   
  
 
@@ -68,4 +71,3 @@ Smedium::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

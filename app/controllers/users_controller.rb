@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   attr_accessor :email
   before_action :get_user
 
+  def register
+    @user = User.find_by_profile_url(params[:profile_url])
+  end
+
   def edit
   end
 

@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
 
 
   private
+  
   def create_profile_url
     self.profile_url = "@" + nickname.downcase.strip.parameterize
   end

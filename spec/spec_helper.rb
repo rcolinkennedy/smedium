@@ -58,7 +58,15 @@ Spork.prefork do
     Capybara.default_host = 'http://example.org'
 
     OmniAuth.config.test_mode = true
-    OmniAuth.config.add_mock(:twitter, { :uid => '12345', :nickname => 'zapnap' })
+    OmniAuth.config.mock_auth[:twitter] = {
+      'uid' => '1337',
+      'provider' => 'twitter',
+      'info' => {
+        'name' => 'R. Colin Kennedy',
+        'nickname' => 'rcolinkennedy'
+        },
+      'credentials' => { :token => "lk2j3lkjasldkjflk3ljsdf" }
+      }
   end
 end
 

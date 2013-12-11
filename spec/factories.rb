@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :user do
-    provider	"socialnetwork"
+    provider	"twitter"
     uid 		"12345678"
     nickname	"foobar1"
     name		"F. Obar Baz"
@@ -9,3 +9,11 @@ FactoryGirl.define do
     email		"foo@example.com"    
   end
 end
+
+# FactoryGirl.define do
+#   factory :user do
+#     provider "twitter"
+#     sequence(:uid) { |n| "#{n}" }
+#     sequence(:name) { |n| "Person_#{n}" }
+#   end
+# end
