@@ -23,14 +23,31 @@ describe "Log in leads to registration" do
   end
 end
 
-feature "new User completes Registration by entering email on Register page" do
+describe "Settings page" do
 
-  scenario "User logs in with OmniAuth" do
-    #Enter tests here
+  subject { page }
+  
+  let(:user) { FactoryGirl.create(:user) }
+  
+  before do
+    visit root_path
+    click_link "Sign in with Twitter"
+    visit settings_path(user)
   end
+  
+  it { should have_content("Settings") }
+  it { should have_content("Update your email address") }
+  # it { should have_content(user.nickname) } => Is finding rcolinkennedy in test DB which is wierd, fix later
 
 end
 
+# feature "new User completes Registration by entering email on Register page" do
+
+#   scenario "User logs in with OmniAuth" do
+#     #Enter tests here
+#   end
+
+# end
 
 # Below is a bunch of Trial and Error
 

@@ -6,6 +6,14 @@ class UsersController < ApplicationController
     @user = User.find_by_profile_url(params[:profile_url])
   end
 
+  def settings
+    if current_user.blank?
+      redirect_to root_url
+    else
+      @user = current_user
+    end
+  end
+
   def edit
   end
 

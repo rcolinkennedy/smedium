@@ -12,6 +12,7 @@ Smedium::Application.routes.draw do
   resources :users, :except => :show
   get "/:profile_url/register", to: "users#register", as: 'register'
   get "/:profile_url", to: "users#show", as: 'profile'
+  get "/me/settings", to: "users#settings", as: 'settings'
 
 end
   

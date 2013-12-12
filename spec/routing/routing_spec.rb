@@ -39,13 +39,10 @@ describe "routes for Users resource" do
   end
 
 
-# to do: move this to :/me/settings
-  # must figure out how to pass proper current_user in without :params - will this be covered by sessions controller
   it "routes Users to the Edit page" do
-    expect(get("/users/:profile_url/edit")).to route_to(
+    expect(get("/me/settings")).to route_to(
       :controller =>"users",
-      :action =>"edit",
-      :id =>":profile_url"
+      :action =>"settings"
       )
   end
 
