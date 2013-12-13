@@ -13,11 +13,16 @@
     <p>
     	<% if current_user %>
     		<h3>Signed in as <%= current_user.nickname %></h3>
-        <%= link_to "Sign out", signout_path, :class => "button radius" %>
-        <%= link_to "Profile", profile_path(current_user), :class => "button radius" %>
-        <%= link_to "Settings", "/me/settings", :class => "button radius" %>
+        <div>
+          <%= link_to "Sign out", signout_path, :class => "button radius" %>
+          <%= link_to "Profile", profile_path(current_user), :class => "button radius" %>
+          <%= link_to "Settings", "/me/settings", :class => "button radius" %>
+        </div>
   		<% else %>
-    		<h3><%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %></h3>
+        <div>
+          <h3>Log into your account or create one by signing in with Twitter</h3>
+          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
+        </div>
   		<% end %>
     </p>
   </body>

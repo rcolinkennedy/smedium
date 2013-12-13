@@ -16,6 +16,7 @@
           <%= render 'shared/error_messages', object: f.object %>
           <%= f.text_field :email %>
           <%= f.submit "Update", :class => "button radius" %>
+          <%= link_to "Home", root_path, :class => "button radius" %>
       </div>
 		<% end %>
   </body>
