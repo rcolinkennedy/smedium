@@ -1,6 +1,6 @@
 Smedium::Application.routes.draw do
 
-  root :to => "static_pages#home"
+  root :to => 'static_pages#home'
 
   get '/about', to: 'static_pages#about'
 
@@ -9,10 +9,11 @@ Smedium::Application.routes.draw do
   get '/signout', to: 'sessions#destroy', as: 'signout'
   get '/logout', to: 'sessions#destroy', as: 'logout'
   
+
   resources :users, :except => :show
-  get "/:profile_url/register", to: "users#register", as: 'register'
-  get "/:profile_url", to: "users#show", as: 'profile'
-  get "/me/settings", to: "users#settings", as: 'settings'
+  get '/:profile_url/register', to: 'users#register', as: 'register'
+  get '/:profile_url', to: 'users#show', as: 'profile'
+  get '/me/settings', to: 'users#settings', as: 'settings'
 
 end
   

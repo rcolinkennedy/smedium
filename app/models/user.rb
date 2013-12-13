@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
   validates :provider, presence: true
@@ -17,13 +18,12 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.nickname = auth["info"]["nickname"]
       user.name = auth["info"]["name"]
-      end
-   end
+    end
+  end
 
   def to_param
     profile_url
   end
-
 
   private
   

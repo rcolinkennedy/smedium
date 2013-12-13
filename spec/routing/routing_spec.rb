@@ -39,10 +39,10 @@ describe "routes for Users resource" do
   end
 
 
-  it "routes Users to the Edit page" do
+  it "routes Users to the Settings page" do
     expect(get("/me/settings")).to route_to(
-      :controller =>"users",
-      :action =>"settings"
+      :controller => "users",
+      :action => "settings"
       )
   end
 
