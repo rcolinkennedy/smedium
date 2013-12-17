@@ -1,7 +1,12 @@
 <% provide(:title, @user.nickname ) %>
 <!DOCTYPE html>
 <html>
+<head>
+    <title>smedium Profile</title>
+  </head>
   <body>
+  <body>
+  	<%= portrait_for @user %>
   	<h1><%= @user.nickname %></h1>
     <p>
     	This is a sample Profile page for

@@ -30,14 +30,16 @@ describe "Settings page" do
   let(:user) { FactoryGirl.create(:user) }
   
   before do
+    visit signout_path
     visit root_path
     click_link "Sign in with Twitter"
-    visit settings_path(user)
+    visit '/me/settings'
   end
   
   it { should have_content("Settings") }
   it { should have_content("Update your email address") }
-  # it { should have_content(user.nickname) } => Is finding rcolinkennedy in test DB which is wierd, fix later
+  # it { should have_content(user.nickname) } 
+    # => Is finding rcolinkennedy in test DB which is wierd, fix later
 
 end
 

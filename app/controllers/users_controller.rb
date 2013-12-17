@@ -19,11 +19,22 @@ class UsersController < ApplicationController
 
   def update
     @user.update_attributes(params.require(:user).permit(:email))
-    if @user.save
-      redirect_to root_url
-    else
-      render 'register'
-    end
+      if @user.save
+        redirect_to root_url
+      else
+        render 'register'
+      end
+
+    # if current_user.blank?
+    #   redirect_to root_url
+    # else
+    #   @user.update_attributes(params.require(:user).permit(:email))
+    #   if @user.save
+    #     redirect_to root_url
+    #   else
+    #     render 'register'
+    #   end
+    # end
   end
 
   def show
