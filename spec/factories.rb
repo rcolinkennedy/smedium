@@ -10,6 +10,8 @@ FactoryGirl.define do
   end
 end
 
+
+# for later when generating users via sequences
 # FactoryGirl.define do
 #   factory :user do
 #     provider "twitter"

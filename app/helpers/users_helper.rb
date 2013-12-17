@@ -27,7 +27,7 @@ module UsersHelper
       end
     end
 
-        # return requested size - code not used yet
+        # return requested size - code not used yet, but may be later
     #     if size == "original"
     #         return self.image
     #     else
