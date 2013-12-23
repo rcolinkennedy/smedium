@@ -12,3 +12,9 @@
 
 @import "foundation_and_overrides";
 // Add imports of custom sass/scss files here */
+
+.portrait {
+	border-radius: 36.5px;
+	-webkit-border-radius: 36.5px;
+	-moz-border-radius: 36.5px;
+}
