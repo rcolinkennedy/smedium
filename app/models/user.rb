@@ -33,3 +33,6 @@ class User < ActiveRecord::Base
   end
 
 end
+
+# (seomthing || "").function
+# something.to_s.function
