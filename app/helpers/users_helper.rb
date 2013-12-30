@@ -37,7 +37,7 @@ module UsersHelper
     # end
 
     image_url = user.image.gsub(filetype, "_#{size}#{filetype}")
-    image_tag(image_url, alt: user.nickname, class: "portrait")
+    image_tag(image_url, alt: user.nickname, class: "portrait_#{size}")
   end
 
 end

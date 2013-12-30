@@ -13,8 +13,20 @@
 @import "foundation_and_overrides";
 // Add imports of custom sass/scss files here */
 
-.portrait {
-	border-radius: 36.5px;
-	-webkit-border-radius: 36.5px;
-	-moz-border-radius: 36.5px;
+.portrait_mini {
+	border-radius: 12px;
+	// -webkit-border-radius: 36px;
+	// -moz-border-radius: 36px;
+}
+
+.portrait_normal {
+	border-radius: 24px;
+	// -webkit-border-radius: 36px;
+	// -moz-border-radius: 36px;
+}
+
+.portrait_bigger {
+	border-radius: 36px;
+	// -webkit-border-radius: 36px;
+	// -moz-border-radius: 36px;
 }
