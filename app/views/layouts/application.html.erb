@@ -19,6 +19,8 @@
       <%= yield %>
       <%= javascript_include_tag "application" %>
       <%= render 'layouts/footer' %>
+    </div>
+    <div class="container">
       <%= "Params:" if Rails.env.development? %>
       <%= debug(params) if Rails.env.development? %>
       <%= "@user:" if Rails.env.development? %>
