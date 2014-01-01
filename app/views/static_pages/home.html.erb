@@ -4,25 +4,34 @@
   <body>
     <h1>Home</h1>
     <p>
-      This is a sample homepage for
-      <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
-      <br>
-      Learn more on our 
-      <%= link_to "About page", about_path %>
-    </p>
-    <p>
     	<% if current_user %>
     		<h3>Signed in as <%= current_user.nickname %></h3>
-        <div>
+        <p>
+          This is a sample homepage for
+          <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+          <br> When you build your own web app, you can add static homepage content for your logged-in users here, or you can insert add your live application content.
+          <br>
+          Learn more on our 
+          <%= link_to "About page", about_path %>
+        </p>
+        <p>
           <%= link_to "Sign out", signout_path, :class => "button radius" %>
           <%= link_to "Profile", profile_path(current_user), :class => "button radius" %>
           <%= link_to "Settings", "/me/settings", :class => "button radius" %>
-        </div>
+        </p>
   		<% else %>
-        <div>
-          <h3>Log into your account or create one with Twitter</h3>
-          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
-        </div>
+        <p>
+          This is a sample homepage for
+          <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+          <br> When you build your own applicaiton, your landing page content can go here.
+          <br>
+          Learn more on our 
+          <%= link_to "About page", about_path %>
+          <p>
+            <h3>Log into your account or create one with Twitter</h3>
+            <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
+          </p>
+        </p>
   		<% end %>
     </p>
   </body>

@@ -1,23 +1,20 @@
 <% provide(:title, 'Register') %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>smedium Register New User</title>
-  </head>
   <body>
     <h1>Register</h1>
     <p>
       <%= portrait_for(@user,'bigger') %>
-      <h2>Welcome to the team, <%= current_user.nickname %></h2>
+      <h2>Welcome, <%= current_user.nickname %></h2>
     </p>
     	<h4>One last step. Enter your email address below to finish registration.</h4>
       <div>
         <%= form_for @user do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
-          <%= f.text_field :email %>
-          <%= f.submit "Complete Registration", :class => "button radius" %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.text_field :email %>
+        <%= f.submit "Complete Registration", :class => "button radius" %>
+        <% end %>
       </div>
-		<% end %>
   </body>
 
   <!-- Found at http://localhost:3000/<username>/register -->

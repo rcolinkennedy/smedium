@@ -1,25 +1,30 @@
 <% provide(:title, 'Settings') %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>smedium User Settings</title>
-  </head>
   <body>
     <h1>Settings</h1>
     <p>
-      <%= portrait_for(@user,'bigger') %>
-      <h2>Signed in as <%= current_user.nickname %></h2>
+      <% if current_user %>
+        <%= portrait_for(@user,'bigger') %>
+        <h2>Signed in as <%= current_user.nickname %></h2>
+        <p>
+          <h4>Update your email address</h4>
+          <div>
+            <%= form_for @user do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <%= f.text_field :email %>
+            <%= f.submit "Update", :class => "button radius" %>
+            <%= link_to "Home", root_path, :class => "button radius" %>
+            <% end %>
+          </div>
+        </p>
+      <% else %>
+        <p>
+          <h3>Log into your account or create one with Twitter</h3>
+          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
+        </p>
+      <% end %>
     </p>
-    <p>
-      <h4>Update your email address</h4>
-      <div>
-          <%= form_for @user do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
-          <%= f.text_field :email %>
-          <%= f.submit "Update", :class => "button radius" %>
-          <%= link_to "Home", root_path, :class => "button radius" %>
-      </div>
-		<% end %>
   </body>
   
-<!-- Found at http://localhost:3000/users/<username>/edit -->
+<!-- Found at http://localhost:3000/me/settings -->
