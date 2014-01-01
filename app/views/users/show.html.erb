@@ -1,19 +1,15 @@
 <% provide(:title, @user.nickname ) %>
 <!DOCTYPE html>
 <html>
-<head>
-    <title>smedium Profile</title>
-  </head>
   <body>
-  <body>
-  	<%= portrait_for(@user,'bigger') %>
-  	<h1><%= @user.nickname %></h1>
+    <%= portrait_for(@user,'bigger') %>
+    <h1><%= @user.nickname %></h1>
     <p>
-    	This is a sample Profile page for
-    	<a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
-    	<div>
-    		<%= link_to "Home", root_path, :class => "button radius" %>
-    	</div>
+      This is a sample Profile page for
+      <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+      <div>
+        <%= link_to "Home", root_path, :class => "button radius" %>
+      </div>
     </p>
   </body>
 </html>
