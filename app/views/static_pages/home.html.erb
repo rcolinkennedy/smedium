@@ -1,11 +1,10 @@
 <% provide(:title, 'Home') %>
+<% provide(:description, 'An elegant starting point') %>
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Home</h1>
     <p>
     	<% if current_user %>
-    		<h3>Signed in as <%= current_user.nickname %></h3>
         <p>
           This is a sample homepage for
           <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
@@ -15,6 +14,7 @@
           <%= link_to "About page", about_path %>
         </p>
         <p>
+          <h3>Signed in as <%= current_user.nickname %></h3>
           <%= link_to "Sign out", signout_path, :class => "button radius" %>
           <%= link_to "Profile", profile_path(current_user), :class => "button radius" %>
           <%= link_to "Settings", "/me/settings", :class => "button radius" %>

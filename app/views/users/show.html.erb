@@ -1,11 +1,12 @@
 <% provide(:title, @user.nickname ) %>
+<% provide(:description, 'Your identity here') %>
 <!DOCTYPE html>
 <html>
   <body>
     <%= portrait_for(@user,'bigger') %>
     <h1><%= @user.nickname %></h1>
     <p>
-      This is a sample Profile page for
+      This is a sample public Profile page for
       <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
       <div>
         <%= link_to "Home", root_path, :class => "button radius" %>

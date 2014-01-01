@@ -1,13 +1,13 @@
 <% provide(:title, 'Register') %>
+<% provide(:description, 'One last step.') %>
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Register</h1>
     <p>
       <%= portrait_for(@user,'bigger') %>
       <h2>Welcome, <%= current_user.nickname %></h2>
     </p>
-    	<h4>One last step. Enter your email address below to finish registration.</h4>
+    	<h4>Enter your email address below to finish registration.</h4>
       <div>
         <%= form_for @user do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
