@@ -36,6 +36,14 @@ $grayMediumLight: #eaeaea;
 
 // Footer formatting
 
+.sticky-footer {
+  height:1em;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  z-index:-1;
+}
+
 footer {
   // @include panel($panel-color, $panel-padding);
   // width: 100%;
@@ -43,6 +51,7 @@ footer {
   // position: fixed;
   // bottom: 0;
 
+  // height:2em;
   // position:fixed;
   // bottom: 0;
   // left: 0;
