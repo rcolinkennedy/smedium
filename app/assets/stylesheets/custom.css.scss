@@ -11,6 +11,8 @@ $grayMediumLight: #eaeaea;
 //   box-sizing: border-box;
 // }
 
+// Basic formatting
+
 
 // Header formatting
 
@@ -40,6 +42,9 @@ $grayMediumLight: #eaeaea;
 // Footer formatting
 
 footer {
+  // position:absolute;
+  z-index:-1;
+
   margin-top: 45px;
   padding-top: 5px;
   border-top: 2px dotted #eaeaea;
