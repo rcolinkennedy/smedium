@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def settings
     if current_user.blank?
+      flash[:warning] = "Please sign in to do that"
       redirect_to root_url
     else
       @user = current_user
@@ -15,14 +16,22 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if current_user.blank?
+      flash[:warning] = "Please sign in to do that"
+      redirect_to root_url
+    else
+      @user = current_user
+    end
   end
 
   def update
     @user.update_attributes(params.require(:user).permit(:email))
     if @user.save
+      flash[:notice] = "Settings updated"
       redirect_to root_url
     else
-      render 'register'
+      flash[:notice] = "Please try again"
+      render 'settings'
     end
   end
 
