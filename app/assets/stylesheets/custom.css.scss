@@ -3,6 +3,7 @@
 
 // mixins, variables, etc.
 
+<<<<<<< HEAD
 $grayMediumLight: #eaeaea;
 
 // @mixin box_sizing {
@@ -10,6 +11,8 @@ $grayMediumLight: #eaeaea;
 //   -webkit-box-sizing: border-box;
 //   box-sizing: border-box;
 // }
+=======
+>>>>>>> front-end
 
 // Basic formatting
 
@@ -42,8 +45,16 @@ $grayMediumLight: #eaeaea;
 // Footer formatting
 
 footer {
-  // position:absolute;
-  z-index:-1;
+  // @include panel($panel-color, $panel-padding);
+  // width: 100%;
+  // margin: 0;
+  // position: fixed;
+  // bottom: 0;
+
+  // position:fixed;
+  // bottom: 0;
+  // left: 0;
+  // z-index:-1;
 
   margin-top: 45px;
   padding-top: 5px;
@@ -109,8 +120,4 @@ footer {
 // miscellaneous
 
 .debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  // @include box_sizing;
 }
