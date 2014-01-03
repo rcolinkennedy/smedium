@@ -1,5 +1,6 @@
 <% provide(:title, 'Settings') %>
-<% provide(:description, 'Customize your experience') %>
+<% provide(:hero_title, "Settings") %>
+<% provide(:description, "Customize your experience") %>
 <!DOCTYPE html>
 <html>
   <body>
@@ -13,15 +14,15 @@
             <%= form_for @user do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :email %>
-            <%= f.submit "Update", :class => "button radius" %>
-            <%= link_to "Home", root_path, :class => "button radius" %>
+            <%= f.submit "Update", :class => 'button radius' %>
+            <%= link_to "Home", root_path, :class => 'button radius' %>
             <% end %>
           </div>
         </p>
       <% else %>
         <p>
           <h3>Log into your account or create one with Twitter</h3>
-          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
+          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => 'button radius' %>
         </p>
       <% end %>
     </p>
