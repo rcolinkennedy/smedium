@@ -13,13 +13,18 @@
   </head>
 
   <body>
-    <%= render 'layouts/nav' %>
-    <%= render 'layouts/hero' %>
-    <div class="container" id="container">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-      <%= javascript_include_tag "application" %>
-      <%= render 'layouts/debug' if Rails.env.development? %>
+    <div class='image-header-bleed'>
+      <%= render 'layouts/header_image' %>
+    </div>
+    <div class='layout-foreground'>
+      <%= render 'layouts/nav' %>
+      <%= render 'layouts/hero' %>
+      <div class="container" id="container">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+        <%= javascript_include_tag "application" %>
+        <%= render 'layouts/debug' if Rails.env.development? %>
+      </div>
     </div>
     <%= render 'layouts/footer' %>
   </body>

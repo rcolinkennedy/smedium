@@ -3,20 +3,62 @@
 
 // mixins, variables, etc.
 
-$grayMediumLight: #eaeaea;
+$PageBackground: #ffffff;
+$GreyMediumLight: #eaeaea;
+$GreyCharcoal: #353535;
+$GreySoftCharcoal: #3F4044;
 
 
 // Basic formatting
-
-.container {
-  position:relative;
-  // left:0px;
-  // top:0px;
-  z-index:1;
+.layout-foreground {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
 }
 
+.container {
+  background-color: $PageBackground;
+  // left:0px;
+  // top:250px;
+}
+
+// Header image formatting
+.image-header {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width:100%;
+  height:100%;
+  max-height: 350px;
+  // background-color: $PageBackground;
+}
+
+.image-header-bleed{
+  // width:100%;
+  // height:100%;
+  z-index: -3;
+  max-height: 350px;
+}
+
+.header-image {
+  width:100%;
+  // height:100%;
+  z-index: -3;
+  max-height: 300px;
+  overflow:hidden;
+}
 
 // Nav formatting
+
+.metabar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 65px;
+
+}
+
 
 // .s-button {
 //   @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
@@ -40,55 +82,63 @@ $grayMediumLight: #eaeaea;
 // Hero formatting
 
 .hero {
-	text-align: center;
-	max-height: 300px;
-}
+  height: 250px;
+  position: relative;
+  top: 0;
+  z-index: 1;
+  text-align: center;
 
-.hero-image {
+  .align-block {
+    height: 80;
+    width: auto;
+    position: relative;
+    // z-index: -1;
 
-}
+    vertical-align: middle;
 
-.align-block {
-	vertical-align: middle;
-	height: 100%
-}
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;
 
-.hero-title {
-
-}
-
-.hero-description {
-
+    // font-style: normal;
+    color: $GreySoftCharcoal;
+    
+    .hero-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 0
+    }
+    .hero-description {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+  }
 }
 
 
 // Footer formatting
 
 #sticky-footer {
-  height:1.5em;
-  position:fixed;
-  bottom: 0;
-  left: 0;
-  z-index:-1;
 }
 
 footer {
-  // @include panel($panel-color, $panel-padding);
-  // width: 100%;
-  // margin: 0;
-  // position: fixed;
-  // bottom: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
 
-  // height:2em;
-  // position:fixed;
-  // bottom: 0;
-  // left: 0;
-  // z-index:-1;
+  height: 1em;
+  width: 100%;
 
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 2px dotted #eaeaea;
+  margin-bottom: 5px;
+  // margin-top: 1em;
+  border-top: 2px dotted $GreyMediumLight;
+
+  padding: 0 1em;
+
   color: #999;
+  background-color: $PageBackground;
+  
   a {
     color: #555;
     &:hover {
@@ -103,7 +153,7 @@ footer {
     list-style: none;
     li {
       float: left;
-      margin-left: 10px;
+      margin-left: 1em;
     }
   }
 }
@@ -146,7 +196,11 @@ footer {
 }
 
 
-// miscellaneous
+// Misc.
 
-.debug_dump {
+#debug_dump {
+  position:relative;
+  margin: 5px 10px;
+  // margin-bottom: 20px;
 }
+
