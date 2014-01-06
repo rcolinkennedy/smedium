@@ -7,14 +7,34 @@
 // You're free to add application-wide styles to this file and they'll appear at the top of the
 // compiled file, but it's generally better to create a new file per style scope.
 // 
-//  *= require_self
-//  *= require_tree .
+// *= require_self
+// *= require_tree .
+// = require foundation_and_overrides
+
 
 @import "foundation_and_overrides";
+/* Add imports of custom sass/scss files here */
 
-
-// Add imports of custom sass/scss files here */
 // @import "custom"
 
 
 // mixins, variables, etc.
+
+
+
+.s-button { 
+  @include button;
+  
+  height: 52px;
+  line-height: 52px;
+  width: 52px;
+  margin: 8px;
+  // vertical-align: middle;
+  padding: 0;
+  background-color: #353535;
+  // text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+
+
+}
