@@ -29,6 +29,17 @@ $GreySoftCharcoal: #3F4044;
   padding: 1em;
 }
 
+.cta-box {
+  width: 75%;
+  margin: 10px auto;
+  text-align:center;
+
+}
+
+#smedium-info {
+  margin: 2em 0;
+}
+
 
 // Header image formatting
 .image-header {
@@ -163,7 +174,7 @@ footer {
   bottom: 0;
   z-index: -1;
 
-  height: 1em;
+  height: 20px;
   width: 100%;
 
   margin-bottom: 5px;
@@ -177,10 +188,12 @@ footer {
   color: #999;
   background-color: $PageBackground;
   
+  .footer-text {
+    vertical-align: middle;
+  }
   a {
     // margin: 0;
     // padding: 0;
-    vertical-align: middle;
     color: #555;
     &:hover {
       color: #222;

@@ -8,16 +8,27 @@
   <body>
     <div class='page-content'>
       <% if current_user %>
-        <%= portrait_for(@user,'bigger') %>
-        <h2>Signed in as <%= current_user.nickname %></h2>
+        <div class="row">
+          <div class="small-2 columns">
+            <%= portrait_for(@user,'bigger') %>
+          </div>
+          <div class="small-10 columns">
+            <h1><%= @user.nickname %></h1>
+          </div>
+        </div>
+        <div class='panel redius' id='smedium-info'>
+          <p>
+            This is a User's settings page; since all we've done is gather the email address at this point, that's all it's used for. As you extend your application, you can use it for other settings specific to your implementation.
+          </p>
+        </div>
+        <h4>Update your email address</h4>
         <p>
-          <h4>Update your email address</h4>
           <div>
             <%= form_for @user do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :email %>
             <%= f.submit "Update", :class => 'button radius' %>
-            <%= link_to "Home", root_path, :class => 'button radius' %>
+            <%= link_to "Nevermind", root_path, :class => 'button radius' %>
             <% end %>
           </div>
         </p>

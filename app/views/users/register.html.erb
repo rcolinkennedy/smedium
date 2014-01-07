@@ -7,9 +7,14 @@
 <html>
   <body>
     <div class='page-content'>
-      <p>
-        <%= portrait_for(@user,'bigger') %>
-        <h2>Welcome, <%= current_user.nickname %></h2>
+      <div class="row">
+          <div class="small-2 columns">
+            <%= portrait_for(current_user,'bigger') %>
+          </div>
+          <div class="small-10 columns">
+            <h2>Welcome, <%= current_user.nickname %></h2>
+          </div>
+        </div>
       </p>
     	<h4>Enter your email address below to finish registration.</h4>
       <div>

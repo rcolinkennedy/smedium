@@ -1,33 +1,45 @@
 <% provide(:title, 'Edit') %>
 <% provide(:hero_title, "Edit") %>
 <% provide(:tagline, "Update User info") %>
-<% provide(:header_image_url, 'http://31.media.tumblr.com/b171b487642753a55dfc14f7eec2e17a/tumblr_mtw7rjIiX01st5lhmo1_1280.jpg') %>
+<% provide(:header_image_url, 'http://25.media.tumblr.com/ce9f48e8642ecc4d1d0edda76d16b9ed/tumblr_mnh1jdFvHR1st5lhmo1_1280.jpg') %>
 
 <!DOCTYPE html>
 <html>
   <body>
     <div class='page-content'>
       <% if current_user %>
-        <%= portrait_for(@user,'bigger') %>
-        <h2>Signed in as <%= current_user.nickname %></h2>
+        <div class="row">
+          <div class="small-2 columns">
+            <%= portrait_for(@user,'bigger') %>
+          </div>
+          <div class="small-10 columns">
+            <h1><%= @user.nickname %></h1>
+          </div>
+        </div>
+        <div class='panel redius' id='smedium-info'>
+          <p>
+            This is a the rails/users/edit page; when you need to implement an admin functionality, this is where you can manage user info, since Users are made with Rails resourceful routes.
+            <br>
+            Since all we've done is gather the email address at this point, that's all it's used for. As you extend your application, you can use it for other settings specific to your implementation.
+          </p>
+        </div>
+        <h4>Update User's email address</h4>
         <p>
-          <h4>Update your email address</h4>
           <div>
             <%= form_for @user do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
             <%= f.text_field :email %>
-            <%= f.submit "Update", :class => "button radius" %>
-            <%= link_to "Home", root_path, :class => "button radius" %>
+            <%= f.submit "Update", :class => 'button radius' %>
+            <%= link_to "Home", root_path, :class => 'button radius' %>
             <% end %>
           </div>
         </p>
       <% else %>
         <p>
           <h3>Log into your account or create one with Twitter</h3>
-          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
-        </p>       
+          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => 'button radius' %>
+        </p>
       <% end %>
     </div>
   </body>
-
 <!-- Found at http://localhost:3000/users/<username>/edit -->
