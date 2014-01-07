@@ -3,37 +3,33 @@
 <% provide(:tagline, "Customize your experience") %>
 <% provide(:header_image_url, 'http://24.media.tumblr.com/25a89be9a2a31bd0c97fafe17761e350/tumblr_mtax0twHix1st5lhmo1_1280.jpg') %>
 
-<!DOCTYPE html>
-<html>
-  <body>
-    <div class='page-content'>
-      <% if current_user %>
-        <div class='panel radius'>
-          <h1><%= portrait_for(current_user,'bigger') %>  <%= current_user.nickname %></h1>
-        </div>
-        <div id='smedium-info'>
-          <p>
-            This is a User's settings page; since all we've done is gather the email address at this point, that's all it's used for. As you extend your application, you can use it for other settings specific to your implementation.
-          </p>
-        </div>
-        <h4>Update your email address</h4>
-        <p>
-          <div>
-            <%= form_for @user do |f| %>
-            <%= render 'shared/error_messages', object: f.object %>
-            <%= f.text_field :email %>
-            <%= f.submit "Update", :class => 'button radius' %>
-            <%= link_to "Nevermind", root_path, :class => 'button radius' %>
-            <% end %>
-          </div>
-        </p>
-      <% else %>
-        <p>
-          <h3>Log into your account or create one with Twitter</h3>
-          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => 'button radius' %>
-        </p>
-      <% end %>
+<div class='page-content'>
+  <% if current_user %>
+    <div class='panel radius'>
+      <h1><%= portrait_for(current_user,'bigger') %>  <%= current_user.nickname %></h1>
     </div>
-  </body>
+    <div id='smedium-info'>
+      <p>
+        This is a User's settings page; since all we've done is gather the email address at this point, that's all it's used for. As you extend your application, you can use it for other settings specific to your implementation.
+      </p>
+    </div>
+    <h4>Update your email address</h4>
+    <p>
+      <div>
+        <%= form_for @user do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.text_field :email %>
+        <%= f.submit "Update", :class => 'button radius' %>
+        <%= link_to "Nevermind", root_path, :class => 'button radius' %>
+        <% end %>
+      </div>
+    </p>
+  <% else %>
+    <p>
+      <h3>Log into your account or create one with Twitter</h3>
+      <%= link_to "Sign in with Twitter", "/auth/twitter", :class => 'button radius' %>
+    </p>
+  <% end %>
+</div>
   
 <!-- Found at http://localhost:3000/me/settings -->

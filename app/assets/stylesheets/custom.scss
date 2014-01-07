@@ -9,11 +9,24 @@ $GreySoftCharcoal: #3F4044;
 
 
 // Basic formatting
-.layout-foreground {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 2em;
-}
+
+// Declarations below extend left off canvas panel to bottom of screen, but break page scrolling. It's the body,html section that breaks evertying
+  // body,html{
+  //     height:100%;
+  //     width:100%;
+  // }
+  // .page{
+  //     height:100%;   
+  // }
+  // .off-canvas-wrap,.inner-wrap{
+  //     height:100%;   
+  // }
+
+  .layout-foreground {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2em;
+  }
 
 .container {
   background-color: $PageBackground;

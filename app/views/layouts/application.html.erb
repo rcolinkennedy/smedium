@@ -12,28 +12,29 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body>
-<!--   <body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)"> -->
-    <div class="off-canvas-wrap">
-      <div class="inner-wrap">
-        <aside class="left-off-canvas-menu">
-          <%= render 'layouts/left_panel' %>
-        </aside>
-        <div class='image-header'>
-          <%= render 'layouts/header_image' %>
-        </div>
-        <div class='layout-foreground'>
-          <%= render 'layouts/nav' %>
-          <%= render 'layouts/hero' %>
-          <div class='container' id='container'>
-            <%= render 'layouts/messages' %>
-            <%= yield %>
-            <%= javascript_include_tag "application" %>    
-            <%= render 'layouts/debug' if Rails.env.development? %>
+  <body onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
+    <div class="page">
+      <div class="off-canvas-wrap">
+        <div class="inner-wrap">
+          <aside class="left-off-canvas-menu">
+            <%= render 'layouts/left_panel' %>
+          </aside>
+          <div class='image-header'>
+            <%= render 'layouts/header_image' %>
           </div>
+          <div class='layout-foreground'>
+            <%= render 'layouts/nav' %>
+            <%= render 'layouts/hero' %>
+            <div class='container' id='container'>
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+              <%= javascript_include_tag "application" %>    
+              <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
+            </div>
+          </div>
+          <%= render 'layouts/footer' %>
+          <a class="exit-off-canvas"></a>
         </div>
-        <%= render 'layouts/footer' %>
-        <a class="exit-off-canvas"></a>
       </div>
     </div>
   </body>

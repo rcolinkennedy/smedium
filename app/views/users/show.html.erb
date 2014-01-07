@@ -3,28 +3,23 @@
 <% provide(:tagline, 'Your identity here') %>
 <% provide(:header_image_url, 'http://25.media.tumblr.com/d9e791508eb9a532aa7f258fa4e0fedc/tumblr_mtag5zve3g1st5lhmo1_1280.jpg') %>
 
-<!DOCTYPE html>
-<html>
-  <body>
-    <div class='page-content'>
-      <div class='panel radius'>
-        <h1><%= portrait_for(@user,'bigger') %>  <%= @user.nickname %></h1>
+<div class='page-content'>
+  <div class='panel radius'>
+    <h1><%= portrait_for(@user,'bigger') %>  <%= @user.nickname %></h1>
+  </div>
+  <div id='smedium-info'>
+    <p>
+      This is a sample public Profile page for
+      <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+      <br>
+      You can see a User's Twitter profile image here, and we there are styles throughout the applicaction to reference it in three sizes, two of them smaller than the one above, for use in feeds and such.
+      <br>
+      We didn't pull profile info from Twitter, but it's easy to set up as a new field about the user, and you can present it here. For other projects, you can put stats about a user and more in this panel. 
+      <br>
+      Since we've used Foundation, adding elements like this nice panel styling and buttons is super easy.
+      <div>
+        <%= link_to "Home", root_path, :class => 'button radius' %>
       </div>
-      <div id='smedium-info'>
-        <p>
-          This is a sample public Profile page for
-          <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
-          <br>
-          You can see a User's Twitter profile image here, and we there are styles throughout the applicaction to reference it in three sizes, two of them smaller than the one above, for use in feeds and such.
-          <br>
-          We didn't pull profile info from Twitter, but it's easy to set up as a new field about the user, and you can present it here. For other projects, you can put stats about a user and more in this panel. 
-          <br>
-          Since we've used Foundation, adding elements like this nice panel styling and buttons is super easy.
-          <div>
-            <%= link_to "Home", root_path, :class => 'button radius' %>
-          </div>
-        </p>
-      </div>
-    </div>
-  </body>
-</html>
+    </p>
+  </div>
+</div>
