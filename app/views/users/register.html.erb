@@ -7,21 +7,13 @@
 <html>
   <body>
     <div class='page-content'>
-      <div class="row">
-          <div class="small-2 columns">
-            <%= portrait_for(current_user,'bigger') %>
-          </div>
-          <div class="small-10 columns">
-            <h2>Welcome, <%= current_user.nickname %></h2>
-          </div>
-        </div>
-      </p>
+      <h3 class='subheader'>Welcome, <%= current_user.nickname %>  <%= portrait_for(current_user,'mini') %></h3>
     	<h4>Enter your email address below to finish registration.</h4>
       <div>
         <%= form_for @user do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <%= f.text_field :email %>
-        <%= f.submit "Complete Registration", :class => "button radius" %>
+        <%= f.submit "Complete Registration", :class => 'button radius' %>
         <% end %>
       </div>
     </div>

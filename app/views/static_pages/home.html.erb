@@ -8,26 +8,28 @@
         <% provide(:hero_title, "smedium") %>
         <% provide(:tagline, "Welcome to the party") %>
         <% provide(:header_image_url, 'http://25.media.tumblr.com/b3d8cc24ae0595168e73d773e1c9b6b9/tumblr_mvyxuasfJ91st5lhmo1_1280.jpg') %>
-        <div class='panel redius' id='smedium-info'>
-          <p>
-            This is a sample logged in homepage for
-            <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
-            <br> When you build your own web app, you can add static homepage content for your logged-in users here, or you can insert your live application content.
-            <br>
-            When a user is logged in, the items in the <a class='left-off-canvas-toggle'>left panel menu</a> change to allow them to see their profile, settings, etc.
-            <br>
-            Learn more on our 
-            <%= link_to "About page", about_path %>
-          </p>
+        <div>
+          <h3 class='subheader'>Signed in as <%= link_to "#{current_user.nickname}", profile_path(current_user) %></h3>
+          <div id='smedium-info'>
+            <p>
+              This is a sample logged in homepage for
+              <a href='https://github.com/rcolinkennedy/smedium/'>smedium by rcolinkennedy</a>
+              <br> When you build your own web app, you can add static homepage content for your logged-in users here, or you can insert your live application content.
+              <br>
+              When a user is logged in, the items in the <a class='left-off-canvas-toggle'>left panel menu</a> change to allow them to see their profile, settings, etc.
+              <br>
+              Learn more on our 
+              <%= link_to "About page", about_path %>
+            </p>
+          </div>
         </div>
-        <h3>Signed in as <%= link_to "#{current_user.nickname}", profile_path(current_user) %></h3>
   		<% else %>
         <% provide(:hero_title, "smedium") %>
         <% provide(:tagline, "An elegant starting point") %>
         <% provide(:header_image_url, 'http://24.media.tumblr.com/b81ed66fb77aa71f7e92da85d4ffc55e/tumblr_mopqamedKu1st5lhmo1_1280.jpg') %>
         <p>
           This is a sample homepage for
-          <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
+          <a href='https://github.com/rcolinkennedy/smedium/'>smedium by rcolinkennedy</a>
           <br> When you build your own application, your landing page content can go here.
           <br>
           Learn more on our 
@@ -36,7 +38,7 @@
         </p>
         <div class='cta-box'>
           <h3>Log into your account or create one with Twitter</h3>
-          <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button radius" %>
+          <%= link_to "Sign in with Twitter", '/auth/twitter', :class => 'button radius' %>
         </div>
   		<% end %>
     </div>

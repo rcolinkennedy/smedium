@@ -7,15 +7,10 @@
 <html>
   <body>
     <div class='page-content'>
-      <div class="row">
-        <div class="small-2 columns">
-          <%= portrait_for(@user,'bigger') %>
-        </div>
-        <div class="small-10 columns">
-          <h1><%= @user.nickname %></h1>
-        </div>
+      <div class='panel radius'>
+        <h1><%= portrait_for(@user,'bigger') %>  <%= @user.nickname %></h1>
       </div>
-      <div class='panel redius' id='smedium-info'>
+      <div id='smedium-info'>
         <p>
           This is a sample public Profile page for
           <a href="https://github.com/rcolinkennedy/smedium/">smedium by rcolinkennedy</a>
@@ -26,7 +21,7 @@
           <br>
           Since we've used Foundation, adding elements like this nice panel styling and buttons is super easy.
           <div>
-            <%= link_to "Home", root_path, :class => "button radius" %>
+            <%= link_to "Home", root_path, :class => 'button radius' %>
           </div>
         </p>
       </div>
