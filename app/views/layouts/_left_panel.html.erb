@@ -1,0 +1,17 @@
+<% if current_user %>
+  <ul class="off-canvas-list">
+    <li><label>smedium</label></li>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "#{current_user.name}", profile_path(current_user) %></li>
+    <li><%= link_to "Settings", "/me/settings" %></li>
+    <li><%= link_to "Sign out", signout_path %></li>
+    <li><%= link_to "About smedium", about_path %></li>
+  </ul>       
+<% else %>
+  <ul class="off-canvas-list">
+    <li><label>smedium</label></li>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Sign in", "/auth/twitter" %></li>
+    <li><%= link_to "About smedium", about_path %></li>
+  </ul>
+<% end %>
