@@ -47,8 +47,7 @@ $GreySoftCharcoal: #3F4044;
     min-height: 350px;
     max-height: 450px;
     background-color:$GreyCharcoal;
-    opacity: 0.5;
-    // height:100%;
+    opacity: 0.4;
   }
   .overflow-buffer {
     position: fixed;
@@ -103,6 +102,7 @@ $GreySoftCharcoal: #3F4044;
 }
 
 // .s-button {
+  // Button mixin wouldn't add here, but would in application.scss; moved there for the time being
 // }
 
 
