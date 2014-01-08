@@ -28,7 +28,7 @@
             <div class='container' id='container'>
               <%= render 'layouts/messages' %>
               <%= yield %>
-              <%= javascript_include_tag "application" %>    
+                  
               <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
             </div>
           </div>
@@ -38,4 +38,5 @@
       </div>
     </div>
   </body>
+  <%= javascript_include_tag "application" %>
 </html>
