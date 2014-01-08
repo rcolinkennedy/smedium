@@ -1,3 +1,8 @@
+// Import Foundation and Overrides so we can acces the variables and mixins
+
+
+@import "foundation_and_overrides";
+
 // Custom Sass and CSS goes in here
 
 // mixins, variables, etc.
@@ -6,6 +11,21 @@ $PageBackground: #ffffff;
 $GreyMediumLight: #eaeaea;
 $GreyCharcoal: #353535;
 $GreySoftCharcoal: #3F4044;
+
+.s-button { 
+  @include button;
+  height: 52px;
+  line-height: 52px;
+  width: 52px;
+  margin: 8px;
+  // vertical-align: middle;
+  padding: 0;
+  // background-color: $GreyCharcoal;
+  background-color: $GreyCharcoal;
+  // text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
 
 
 // Basic formatting
@@ -16,6 +36,7 @@ $GreySoftCharcoal: #3F4044;
   //     width:100%;
   // }
   .page{
+    // Fix the footer
     margin-bottom: 20px;
     // padding-bottom: 20px;
     // height:100%;   
@@ -27,7 +48,7 @@ $GreySoftCharcoal: #3F4044;
   .layout-foreground {
     position: relative;
     z-index: 1;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
   }
 
 .container {
