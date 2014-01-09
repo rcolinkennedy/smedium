@@ -23,7 +23,8 @@ gem 'foundation-rails', "~> 5.0.2.0"
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# ... and it also causes problems with Foundation, so eliminating
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -53,6 +54,9 @@ end
 gem 'omniauth-twitter'
 # Use Figaro to stash keys for dev and deployment
 gem 'figaro', '~> 0.7.0'
+
+# Use Mandrill API for transactional emails
+gem 'mandrill-api'
 
 # Set up development group
 group :development, :test do
