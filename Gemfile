@@ -22,6 +22,10 @@ gem 'foundation-rails', "~> 5.0.2.0"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# ... and it also causes problems with Foundation, so eliminating
+# gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -51,6 +55,9 @@ gem 'omniauth-twitter'
 # Use Figaro to stash keys for dev and deployment
 gem 'figaro', '~> 0.7.0'
 
+# Use Mandrill API for transactional emails
+gem 'mandrill-api'
+
 # Set up development group
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -67,6 +74,11 @@ group :development, :test do
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
+end
+
+group :development do
+  # Use Letter Opener to build transactional email
+  gem "letter_opener"
 end
 
 group :test do

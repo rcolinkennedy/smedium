@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def update
     @user.update_attributes(params.require(:user).permit(:email))
     if @user.save
+      UserMailer.email_confirm(@user).deliver
       flash[:notice] = "Settings updated"
       redirect_to root_url
     else
