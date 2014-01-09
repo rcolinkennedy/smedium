@@ -72,6 +72,11 @@ group :development, :test do
   gem 'childprocess', '0.3.9'
 end
 
+group :development do
+  # Use Letter Opener to build transactional email
+  gem "letter_opener"
+end
+
 group :test do
   # capybara has dependencies on selenium
   gem 'selenium-webdriver', '2.35.1'
