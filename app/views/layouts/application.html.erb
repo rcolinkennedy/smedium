@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style='height: 100%'>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,28 +13,29 @@
   </head>
 
   <body onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)'>
-    <div class='page'>
-      <div class='off-canvas-wrap'>
-        <div class='inner-wrap'>
-          <aside class='left-off-canvas-menu'>
-            <%= render 'layouts/left_panel' %>
-          </aside>
-          <div class='image-header'>
-            <%= render 'layouts/header_image' %>
-          </div>
-          <div class='layout-foreground'>
-            <nav class='left-off-canvas-toggle nav-button site-nav' tabindex='-1'>S</nav>
-            <%= render 'layouts/hero' %>
-            <div class='container' id='container'>
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-              <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
+    <div class='off-canvas-wrap'>
+      <div class='inner-wrap'>
+        <aside class='left-off-canvas-menu'>
+          <%= render 'layouts/left_panel' %>
+        </aside>
+          <nav class='left-off-canvas-toggle nav-button site-nav' tabindex='-1'>S</nav>
+          <div class='container' id='container'>
+            <div class='screen-content'>
+              <div class='image-header'>
+                <%= render 'layouts/header_image' %>
+              </div>
+              <div class='layout-foreground'>
+                <%= render 'layouts/hero' %>
+                <%= render 'layouts/messages' %>
+                <%= yield %>
+                <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
+                <%= render 'layouts/footer' %>
+              </div>
             </div>
-          </div>
+          </div>    
           <a class="exit-off-canvas"></a>
         </div>
       </div>
-      <%= render 'layouts/footer' %>
     </div>
   </body>
   <%= javascript_include_tag "application" %>
