@@ -78,15 +78,9 @@ $GreySoftCharcoal: #3F4044;
 }
 
 .image-header-bleed {
-  // position: fixed;
-  // top: 0;
-  // z-index: -1;
-  // width: 100%;
-  // height: 300px;
-  // background-color:$GreyCharcoal;
-  // opacity: 1;
-  // opacity: 0.4;
+  // with javascript, this can trigger a CSS blur on scroll, but keeping it lightweight for now.
 }
+
 @media #{$medium-up} {
   #header-image {
   background-position: center;
@@ -106,6 +100,7 @@ $GreySoftCharcoal: #3F4044;
     opacity: 0.4;
   }
 }
+
 @media #{$small-only} {
   #header-image {
     background-position: center;
