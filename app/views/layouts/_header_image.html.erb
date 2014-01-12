@@ -1,7 +1,12 @@
-<div class='image-header-bleed' 
-	style='background-image: url(<%=yield(:header_image_url) %>)' id='header-image'>
+<div class='image-header-bleed'>
+	<span
+		style='background-image: url(<%=yield(:header_image_url) %>)' id='header-image'>
+		<span id="image-inner" %>
+		</span>
+	</span>
 </div>
 <div class='image-overlay'>
+	<%= yield(:image_ratio) %>
 </div>
 
 <!-- <%= image_tag(yield(:header_image_url), class: 'header-image' ) %> -->

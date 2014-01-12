@@ -77,10 +77,49 @@ $GreySoftCharcoal: #3F4044;
   // height:100%;
 
   .image-header-bleed {
-    @media #{$small-only} {
-      height: 300px;
+    // @media #{$small-only} {
+    //   height: 300px;
+    // }
+    // 
+    width: 100%;
+  }
+  #header-image {
+    // To use spans
+    display: inline-block;
+    height: 450px;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-size: 100%;
+    // background-position: 50% 50%;
+    background-repeat: no-repeat;
+    #image-inner {
+      // padding-top: 450px;
+      padding-top: 66.71%; /* height/width of image */
+      display: block;
+      height: 0;
     }
-    height: 450;
+  }
+  @media #{$small-only} {
+    #header-image {
+    // To use spans
+    display: inline-block;
+    height: 300px;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    }
+    #image-inner {
+      // padding-top: 450px;
+      padding-top: 66.71%; /* height/width of image */
+      display: block;
+      height: 0;
+    }
   }
   .image-overlay {
     // this should be be overlay over the image, semi-transparent, and blurs when scrolled down
@@ -113,17 +152,7 @@ $GreySoftCharcoal: #3F4044;
   // }
 }
 
-#header-image {
-  // display: inline-block;
-  width: 100%;
-  // font-size: 0;
-  // line-height: 0;
-  vertical-align: middle;
-  background-size: 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  // background-image: url(image.jpg); 
-}
+
 
 // used when trying to make header image responsive, requires image to be in CSS background-image, which cannot be dynamically set
 // #image {
@@ -139,11 +168,7 @@ $GreySoftCharcoal: #3F4044;
 //   // background-image: url(http://31.media.tumblr.com/5d586f521b11de846229fa3cce2fc413/tumblr_myp9enmO9z1st5lhmo1_1280.jpg); 
 // }
 
-// #image-inner {
-//   padding-top: 63.35%; /* height/width of image */
-//   display: block;
-//   height: 0;
-// }
+
 
 
 // Nav formatting

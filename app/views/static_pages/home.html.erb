@@ -5,6 +5,7 @@
     <% provide(:hero_title, "smedium") %>
     <% provide(:tagline, "Welcome to the party") %>
     <% provide(:header_image_url, 'http://25.media.tumblr.com/b3d8cc24ae0595168e73d773e1c9b6b9/tumblr_mvyxuasfJ91st5lhmo1_1280.jpg') %>
+    <!-- <% provide(:image_ratio, ) %> -->
     <div>
       <h3 class='subheader'>Signed in as <%= link_to "#{current_user.nickname}", profile_path(current_user) %></h3>
       <div id='smedium-info'>
@@ -24,6 +25,7 @@
     <% provide(:hero_title, "smedium") %>
     <% provide(:tagline, "An elegant starting point") %>
     <% provide(:header_image_url, 'http://24.media.tumblr.com/b81ed66fb77aa71f7e92da85d4ffc55e/tumblr_mopqamedKu1st5lhmo1_1280.jpg') %>
+    <!-- For responsive images, padding on layout needs to be % ratio of w /h, so here 66.7% -->
     <p>
       This is a sample homepage for
       <a href='https://github.com/rcolinkennedy/smedium/'>smedium by rcolinkennedy</a>
