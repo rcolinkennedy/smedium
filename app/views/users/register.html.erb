@@ -3,8 +3,13 @@
 <% provide(:tagline, "One last step") %>
 <% provide(:header_image_url, 'http://25.media.tumblr.com/408fbfeae2d8590512b9fc9cc6207090/tumblr_mr807bH7hh1st5lhmo1_1280.jpg') %>
 
+<div id='profile-info'>
+  <div id='profile_photo'><%= portrait_for(current_user,'bigger') %></div>
+  <h1>Welcome, <%= current_user.name %></h1>
+  <br>
+  <h2>So nice to see you.</h2>
+</div>  
 <div class='page-content'>
-  <h3 class='subheader'>Welcome, <%= current_user.nickname %>  <%= portrait_for(current_user,'mini') %></h3>
 	<h4>Enter your email address below to finish registration.</h4>
   <div>
     <%= form_for @user do |f| %>

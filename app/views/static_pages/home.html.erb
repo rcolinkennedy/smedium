@@ -6,7 +6,7 @@
     <% provide(:tagline, "Welcome to the party") %>
     <% provide(:header_image_url, 'http://25.media.tumblr.com/b3d8cc24ae0595168e73d773e1c9b6b9/tumblr_mvyxuasfJ91st5lhmo1_1280.jpg') %>
     <div>
-      <h3 class='subheader'>Signed in as <%= link_to "#{current_user.nickname}", profile_path(current_user) %></h3>
+      <h3 class='subheader'>Signed in as <%= link_to "@#{current_user.nickname}", profile_path(current_user) %></h3>
       <div id='smedium-info'>
         <p>
           This is a sample logged in homepage for

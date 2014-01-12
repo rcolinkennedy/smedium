@@ -19,7 +19,6 @@
         <aside class='left-off-canvas-menu' style='height: 100%'>
           <%= render 'layouts/left_panel' %>
         </aside>
-
           <nav class='left-off-canvas-toggle nav-button site-nav' tabindex='-1'>S</nav>
           <div class='container' id='container'>
             <div class='screen-content'>
@@ -29,7 +28,9 @@
               <div class='layout-foreground'>
                 <%= render 'layouts/hero' %>
                 <%= render 'layouts/messages' %>
-                <%= yield %>
+                <div id='app-content'>
+                  <%= yield %>
+                </div>
                 <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
                  <%= render 'layouts/footer' %>
               </div>
