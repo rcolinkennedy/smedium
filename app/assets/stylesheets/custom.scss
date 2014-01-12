@@ -44,6 +44,7 @@ $FooterHeight: 2em;
   // top:250px;
   // z-index: 1;
   height: 100%;
+  // Use properties below with sticky footer
   margin-bottom: $FooterHeight;
 }
 
@@ -245,8 +246,15 @@ $FooterHeight: 2em;
 // Footer formatting
 
 #sticky-footer {
-  margin-bottom: 0px;
-  font-size: $FooterTextSize;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  // font-size: $FooterTextSize;
+}
+
+#unstuck-footer {
+  position: relative;
+  bottom: 0;
 }
 
 #footer-contents {
@@ -259,13 +267,10 @@ $FooterHeight: 2em;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
+  margin-bottom: 0px;
   height: $FooterHeight;
-  // height: 2em;
   width: 100%;
-  // color: #999;
+  font-size: $FooterTextSize;
   background-color: $PageBackground;
   
   .footer-text {
