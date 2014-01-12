@@ -11,6 +11,8 @@ $PageBackground: #ffffff;
 $GreyMediumLight: #eaeaea;
 $GreyCharcoal: #353535;
 $GreySoftCharcoal: #3F4044;
+$FooterTextSize: 0.8em;
+$FooterHeight: 2em;
 
 
 // Basic formatting
@@ -30,6 +32,9 @@ $GreySoftCharcoal: #3F4044;
   // //     height:100%;   
   // // }
 
+// .off-canvas-wrap .inner-wrap .off-canvas-wrap{
+//   z-index:-3;
+// }
 
 .container {
   // position: absolute;
@@ -39,10 +44,12 @@ $GreySoftCharcoal: #3F4044;
   // top:250px;
   // z-index: 1;
   height: 100%;
+  margin-bottom: $FooterHeight;
 }
 
 .screen-content {
   height: 100%;
+  // margin-bottom: $FooterHeight;
   // position: relative;
   
   .layout-foreground {
@@ -231,8 +238,6 @@ $GreySoftCharcoal: #3F4044;
     width: 73px;
     margin-left: auto;
     margin-right: auto;
-    
-    
   }
 }
 
@@ -241,52 +246,51 @@ $GreySoftCharcoal: #3F4044;
 
 #sticky-footer {
   margin-bottom: 0px;
+  font-size: $FooterTextSize;
+}
+
+#footer-contents {
+  margin-bottom: 5px;
+  margin-top: 3px;
+  border-top: 2px dotted $GreyMediumLight;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  height: 100%;
 }
 
 footer {
   position: fixed;
   bottom: 0;
   z-index: -1;
-
-  height: 20px;
+  height: $FooterHeight;
+  // height: 2em;
   width: 100%;
-
-  margin-bottom: 5px;
-  margin-top: 5px;
-  border-top: 2px dotted $GreyMediumLight;
-
-  // padding: 0.25em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-
-  color: #999;
-  // background-color: $PageBackground;
+  // color: #999;
+  background-color: $PageBackground;
   
   .footer-text {
     vertical-align: middle;
+    font-size: $FooterTextSize;
   }
   a {
     // margin: 0;
     // padding: 0;
+    // font-size: $FooterTextSize;
     color: #555;
     &:hover {
       color: #222;
     }
   }
-  small {
-    margin: 0;
-    padding: 0;
-    float: left;
-    // vertical-align: middle;
-  }
   ul {
     float: right;
     // vertical-align: middle;
     list-style: none;
+    font-size: $FooterTextSize;
     li {
       float: left;
       // vertical-align: middle;
       margin-left: 1em;
+      // font-size: $FooterTextSize;
     }
   }
 }
