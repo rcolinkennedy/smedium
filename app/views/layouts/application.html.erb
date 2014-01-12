@@ -12,12 +12,14 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)'>
+  <body onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)' style='height: 100%'>
     <div class='off-canvas-wrap'>
-      <div class='inner-wrap'>
-        <aside class='left-off-canvas-menu'>
+     <!--  Tring to fix Foundation off-canvas height sizing cwith style='height: 100%' above kills ability to scroll main screen -->
+      <div class='inner-wrap' style='height: 100%'>
+        <aside class='left-off-canvas-menu' style='height: 100%'>
           <%= render 'layouts/left_panel' %>
         </aside>
+
           <nav class='left-off-canvas-toggle nav-button site-nav' tabindex='-1'>S</nav>
           <div class='container' id='container'>
             <div class='screen-content'>
@@ -29,7 +31,7 @@
                 <%= render 'layouts/messages' %>
                 <%= yield %>
                 <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
-                <%= render 'layouts/footer' %>
+                 <%= render 'layouts/footer' %>
               </div>
             </div>
           </div>    
