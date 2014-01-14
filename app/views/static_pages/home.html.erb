@@ -24,15 +24,20 @@
     <% provide(:hero_title, "smedium") %>
     <% provide(:tagline, "An elegant starting point") %>
     <% provide(:header_image_url, 'http://24.media.tumblr.com/6cd60ec5d38560f851ad6856acc7f7ff/tumblr_myp94uOjbG1st5lhmo1_1280.jpg') %>
-    <p>
-      This is a sample homepage for
-      <a href='https://github.com/rcolinkennedy/smedium/'>smedium by rcolinkennedy</a>
-      <br> When you build your own application, your landing page content can go here.
-      <br>
-      Learn more on our 
-      <%= link_to "About page", about_path %>
-      or just <a href='https://github.com/rcolinkennedy/smedium/fork'>go ahead and fork it.</a>
-    </p>
+    <div>
+      <h3 class='subheader'>Welcome home</h3>
+      <div id='smedium-info'>
+        <p>
+          This is a sample homepage for
+          <a href='https://github.com/rcolinkennedy/smedium/'>smedium by rcolinkennedy</a>
+          <br> When you build your own application, your landing page content can go here.
+          <br>
+          Learn more on our 
+          <%= link_to "About page", about_path %>
+          or just <a href='https://github.com/rcolinkennedy/smedium/fork'>go ahead and fork it.</a>
+        </p>
+      </div>
+    </div>
     <div class='cta-box'>
       <h3>Log into your account or create one with Twitter</h3>
       <%= link_to "Sign in with Twitter", '/auth/twitter', :class => 'button radius' %>
