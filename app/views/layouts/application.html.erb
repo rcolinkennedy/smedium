@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" style='height: 100%'>
+<html lang="en">
+  <!--  style='height: 100%' -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,11 +13,15 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)' style='height: 100%'>
+  <body>
+<!-- onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)' -->
+    <!--  Tring to fix Foundation off-canvas height sizing with style='height: 100%' above kills ability to click footer -->
     <div class='off-canvas-wrap'>
-     <!--  Tring to fix Foundation off-canvas height sizing cwith style='height: 100%' above kills ability to scroll main screen -->
-      <div class='inner-wrap' style='height: 100%'>
-        <aside class='left-off-canvas-menu' style='height: 100%'>
+     <!--  Tring to fix Foundation off-canvas height sizing with style='height: 100%' above kills ability to scroll main screen -->
+      <div class='inner-wrap'>
+        <!--  Tring to fix Foundation off-canvas height sizing with style='height: 100%' above kills ability to click footer -->
+        <aside class='left-off-canvas-menu'>
+          <!-- style='height: 100%' -->
           <%= render 'layouts/left_panel' %>
         </aside>
           <nav class='left-off-canvas-toggle nav-button site-nav' tabindex='-1'>S</nav>
@@ -32,8 +37,8 @@
                   <%= yield %>
                 </div>
                 <!-- <%= render 'layouts/debug' if Rails.env.development? %> -->
+                <%= render 'layouts/footer' %>
               </div>
-
             </div>
           </div>    
           <a class="exit-off-canvas"></a>

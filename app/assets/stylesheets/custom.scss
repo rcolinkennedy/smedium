@@ -36,6 +36,9 @@ $FooterHeight: 2em;
 //   z-index:-3;
 // }
 
+.inner-wrap .container {
+  margin-bottom: $FooterHeight;
+}
 .container {
   // position: absolute;
   // position: relative;
