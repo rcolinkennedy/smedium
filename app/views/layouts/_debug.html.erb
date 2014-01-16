@@ -1,17 +1,13 @@
 <debug>
-	<div class="panel radius" id="debug_dump">
+	<div class="panel radius">
 		<p>
 			<h5><%= "params:" %></h5>
-			<%= debug(params) %>
+			<p><%= debug(params).to_s %></p>
 			<br>
-			<h5>
-			<%= "@user:" %>
-			</h5>
+			<h5><%= "@user:" %></h5>
 			<%= debug(@user) %>
 			<br>
-			<h5>
-			<%= "current_user:" %>
-			</h5>
+			<h5><%= "current_user:" %></h5>
 			<%= debug(current_user) %>
 		</p>
 	</div>

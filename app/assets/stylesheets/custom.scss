@@ -28,40 +28,41 @@ $FooterHeight: 2em;
   //   // padding-bottom: 20px;
   //   // height:100%;   
   // }
-  // // .off-canvas-wrap,.inner-wrap{
-  // //     height:100%;   
-  // // }
 
-// .off-canvas-wrap .inner-wrap .off-canvas-wrap{
-//   z-index:-3;
+
+// .off-canvas-wrap .inner-wrap .off-canvas-wrap {
+//   height:100%;
+//   // z-index:-3;
 // }
 
-.inner-wrap .container {
-  margin-bottom: $FooterHeight;
-}
+// .inner-wrap {
+//   margin-bottom: $FooterHeight;
+// }
+
 .container {
-  // position: absolute;
+  position: absolute;
   // position: relative;
-  // top: 0px;
+  top: 0px;
   // left:0px;
   // top:250px;
   // z-index: 1;
   height: 100%;
-  // Use properties below with sticky footer
-  margin-bottom: $FooterHeight;
+  width: 100%;
+  overflow-y: scroll;
 }
 
-.screen-content {
-  height: 100%;
-  // margin-bottom: $FooterHeight;
-  // position: relative;
+// .screen-content {
+//   // height: 100%;
+//   // margin-bottom: $FooterHeight;
+//   // position: relative;
+// }
   
-  .layout-foreground {
-    // position: relative;
-    // top: 0px;
-    // z-index: 1;
-    // margin-bottom: 2em;
-  }
+.layout-foreground {
+  // position: absolute;
+  // top: 0px;
+  // z-index: 1;
+  // z-index: 3;
+  // margin-bottom: 2em;
 }
 
 #app-content {
@@ -72,30 +73,32 @@ $FooterHeight: 2em;
   // margin-bottom: 1em;
   padding: 16px;
   background-color: $PageBackground;
+  margin-bottom: $FooterHeight;
 }
 
 .cta-box {
   width: 75%;
   margin: 10px auto;
-  text-align:center;
-
+  text-align: center;
 }
 
-#smedium-info {
-  // margin: 2em 0;
-}
+// #smedium-info {
+// }
 
 // Nav formatting
 
 .site-nav {
+  position:relative;
+  z-index: 1;
   top: 10px;
   left: 10px;
+  // overflow: scroll;
 }
 
 .nav-button { 
   @include button;
-  position:absolute;
-  z-index: 600;
+  // position:relative;
+  // z-index: 600;
   height: 52px;
   width: 52px;
   margin: 0;
@@ -105,6 +108,10 @@ $FooterHeight: 2em;
   font-size: 24px;
   font-weight: 700;
 }
+
+// .off-canvas-wrap .inner-wrap {
+//   height: 100%
+// }
 
 
 // Header image formatting
@@ -189,6 +196,7 @@ $FooterHeight: 2em;
 @media #{$small-only} {
   .hero {
     position:relative;
+    // position: absolute;
     // z-index: 100;
     height: 300px;
     width: auto;
@@ -250,13 +258,8 @@ $FooterHeight: 2em;
 #sticky-footer {
   position: fixed;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
   // font-size: $FooterTextSize;
-}
-
-#unstuck-footer {
-  position: relative;
-  bottom: 0;
 }
 
 #footer-contents {
@@ -342,9 +345,8 @@ footer {
 
 
 // Misc.
-
-#debug_dump {
+.debug_dump {
   position:relative;
-  margin: 5px 10px;
-  // margin-bottom: 20px;
+  margin: 0;
+  word-wrap: break-word;  
 }
