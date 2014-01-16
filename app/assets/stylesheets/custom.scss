@@ -17,28 +17,6 @@ $FooterHeight: 2em;
 
 // Basic formatting
 
-// Declarations below extend left off canvas panel to bottom of screen, but break page scrolling. It's the body,html section that breaks evertying
-  // body,html{
-  //     height:100%;
-  //     width:100%;
-  // }
-  // .page{
-  //   // Fix the footer
-  //   margin-bottom: 20px;
-  //   // padding-bottom: 20px;
-  //   // height:100%;   
-  // }
-
-
-// .off-canvas-wrap .inner-wrap .off-canvas-wrap {
-//   height:100%;
-//   // z-index:-3;
-// }
-
-// .inner-wrap {
-//   margin-bottom: $FooterHeight;
-// }
-
 .container {
   position: absolute;
   // position: relative;
@@ -109,21 +87,14 @@ $FooterHeight: 2em;
   font-weight: 700;
 }
 
-// .off-canvas-wrap .inner-wrap {
-//   height: 100%
-// }
-
 
 // Header image formatting
 
 .image-header {
-  // This is the countainer for the image (bottom) and the image bleed (top), both aligned to the top.
-  // Image bleed should have overflow buffer at the bottom to cover overrun from image and keep it from showing up behind the footer.
   position: absolute;
   top: 0;
   // z-index: -3;
   width:100%;
-  // height:100%;
 }
 
 .image-header-bleed {
@@ -180,23 +151,12 @@ $FooterHeight: 2em;
   }
 }
 
-  // .overflow-buffer {
-  //   position: fixed;
-  //   z-index: -2;
-  //   bottom: 0;
-  //   height: 50px;
-  //   width:100%;
-  //   background-color: $PageBackground;
-  // }
-// }
-
 
 // Hero formatting
 
 @media #{$small-only} {
   .hero {
     position:relative;
-    // position: absolute;
     // z-index: 100;
     height: 300px;
     width: auto;
@@ -259,7 +219,6 @@ $FooterHeight: 2em;
   position: fixed;
   bottom: 0;
   z-index: 0;
-  // font-size: $FooterTextSize;
 }
 
 #footer-contents {
@@ -283,9 +242,6 @@ footer {
     font-size: $FooterTextSize;
   }
   a {
-    // margin: 0;
-    // padding: 0;
-    // font-size: $FooterTextSize;
     color: #555;
     &:hover {
       color: #222;
@@ -293,14 +249,11 @@ footer {
   }
   ul {
     float: right;
-    // vertical-align: middle;
     list-style: none;
     font-size: $FooterTextSize;
     li {
       float: left;
-      // vertical-align: middle;
       margin-left: 1em;
-      // font-size: $FooterTextSize;
     }
   }
 }
@@ -339,7 +292,6 @@ footer {
 }
 
 .field_with_errors {
-  // @extend .control-group;
   @extend .error;
 }
 
