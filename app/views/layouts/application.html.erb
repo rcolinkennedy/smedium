@@ -26,8 +26,9 @@
               </div>
               <div class='layout-foreground'>
                 <%= render 'layouts/hero' %>
-                <%= render 'layouts/messages' %>
+                
                 <div id='app-content'>
+                  <%= render 'layouts/messages' %>
                   <%= yield %>
                   <%= render 'layouts/debug' if Rails.env.development? %>
                 </div>
