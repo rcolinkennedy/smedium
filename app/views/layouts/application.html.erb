@@ -13,9 +13,8 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body style='height: 100%'>
+  <body style='height: 100%' onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)'>
     <!-- onload='setTimeout(function() {window.scrollTo(0, 1)}, 100)' -->
-    <!--  Tring to fix Foundation off-canvas height sizing with style='height: 100%' above kills ability to click footer -->
     <div class='off-canvas-wrap' style='height: 100%'>
       <div class='inner-wrap' style='height: 100%'>
         <aside class='left-off-canvas-menu'>
