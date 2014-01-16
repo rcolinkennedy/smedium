@@ -49,14 +49,10 @@ end
 # Use Better Errors for error inspection
 # gem 'better_errors'
 
-
 # Authentication tools
 gem 'omniauth-twitter'
 # Use Figaro to stash keys for dev and deployment
 gem 'figaro', '~> 0.7.0'
-
-# Use Mandrill API for transactional emails
-gem 'mandrill-api'
 
 # Set up development group
 group :development, :test do

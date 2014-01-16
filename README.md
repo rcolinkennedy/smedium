@@ -13,6 +13,7 @@ Use case is as a very barebones, lightweight starting point for projects. Goal w
 * gem omniauth-twitter (https://github.com/arunagw/omniauth-twitter)
 * uses gem figaro to handle keys as environment variables for Twitter and Mandrill (https://github.com/laserlemon/figaro)
 * currently set up for Mandrill SMTP for transactional email
+* this configuration is set up for local and test environments to use SQLITE and deployment to Heroku using PostgreSQL
 
 ## Examples
 - You can find an exmaple at (http://smedium.rcolinkennedy.com) for as long as Heroku lets me leave it up.
