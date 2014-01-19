@@ -19,28 +19,16 @@ $FooterHeight: 2em;
 
 .container {
   position: absolute;
-  // position: relative;
   top: 0px;
-  // left:0px;
-  // top:250px;
-  // z-index: 1;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
 }
 
 // .screen-content {
-//   // height: 100%;
-//   // margin-bottom: $FooterHeight;
-//   // position: relative;
 // }
   
 .layout-foreground {
-  // position: absolute;
-  // top: 0px;
-  // z-index: 1;
-  // z-index: 3;
-  // margin-bottom: 2em;
 }
 
 #app-content {
@@ -63,6 +51,7 @@ $FooterHeight: 2em;
 // #smedium-info {
 // }
 
+
 // Nav formatting
 
 .site-nav {
@@ -70,13 +59,10 @@ $FooterHeight: 2em;
   z-index: 1;
   top: 10px;
   left: 10px;
-  // overflow: scroll;
 }
 
 .nav-button { 
   @include button;
-  // position:relative;
-  // z-index: 600;
   height: 52px;
   width: 52px;
   margin: 0;
@@ -93,7 +79,6 @@ $FooterHeight: 2em;
 .image-header {
   position: absolute;
   top: 0;
-  // z-index: -3;
   width:100%;
 }
 
@@ -116,7 +101,6 @@ $FooterHeight: 2em;
   }
   .image-overlay {
     position: fixed;
-    // z-index: -2;
     top: 0;
     left: 0;
     width: 100%;
@@ -141,7 +125,6 @@ $FooterHeight: 2em;
   }
   .image-overlay {
     position: fixed;
-    // z-index: -2;
     top: 0;
     left: 0;
     width: 100%;

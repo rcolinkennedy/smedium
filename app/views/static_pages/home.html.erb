@@ -1,8 +1,7 @@
 <% provide(:title, 'Home') %>
-
+<% provide(:hero_title, "smedium") %>
 <div class='page-content'>
 	<% if current_user %>
-    <% provide(:hero_title, "smedium") %>
     <% provide(:tagline, "Welcome to the party") %>
     <% provide(:header_image_url, 'http://25.media.tumblr.com/b3d8cc24ae0595168e73d773e1c9b6b9/tumblr_mvyxuasfJ91st5lhmo1_1280.jpg') %> 
     <div>
@@ -21,7 +20,6 @@
       </div>
     </div>
 	<% else %>
-    <% provide(:hero_title, "smedium") %>
     <% provide(:tagline, "An elegant starting point") %>
     <% provide(:header_image_url, 'http://24.media.tumblr.com/6cd60ec5d38560f851ad6856acc7f7ff/tumblr_myp94uOjbG1st5lhmo1_1280.jpg') %>
     <div>
